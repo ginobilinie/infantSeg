@@ -1,6 +1,6 @@
 '''
 Created on 11/01/2016
-modified by Dong
+written by Dong
 '''
 import numpy as np
 from scipy.ndimage.morphology import binary_fill_holes
