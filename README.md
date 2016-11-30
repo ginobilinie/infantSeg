@@ -4,3 +4,4 @@ This is the project for multi-modality infant brain segmentation at the isointen
 More will be uploaded after the journal paper is accepted.
 
 evalCaffeModels4MedImg.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients. 
+readMedImg4CaffeCropNie.py: this is the code to extract 3d patches from a medical image (mri/ct and so on) for patients.
