@@ -13,6 +13,8 @@ infant_train_test.prototxt: define the network architecture
 
 infant_solver.prototxt: define the network hyperparameters
 
+Basic steps:
+
 1. crop patches from medical image data with readMedImg4CaffeCropNie.py, I use SimpleITK as readers.
 
 2. prepare the network: define infant_train_test.prototxt, and decide infant_solver.prototxt
