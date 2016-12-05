@@ -21,12 +21,12 @@ infant_solver.prototxt: define the network hyperparameters
 
 Basic steps:
 
-1. crop patches from medical image data with readMedImg4CaffeCropNie.py, I use SimpleITK as readers.
+1. crop patches from medical image data with readMedImg4CaffeCropNie4SingleS.py, I use SimpleITK as readers.
 
 2. prepare the network: define infant_train_test.prototxt, and decide infant_solver.prototxt
 
 3. train the network with caffe
 
-4. evaluate the caffe model with readMedImg4CaffeCropNie4SingleS.py, I store them in nifti format.
+4. evaluate the caffe model with evalCaffeModel4ImgNie.py, I store them in nifti format.
 
 
