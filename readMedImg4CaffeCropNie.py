@@ -54,18 +54,18 @@ def cropCubic(matFA,matSeg,fileID,d,step,rate):
         
        
     #fid=open('trainxxx_list.txt','a');
-    for i in range(0,row-dSeg[0],step[0]):
-        for j in range(0,col-dSeg[1],step[1]):
-            for k in range(0,len-dSeg[2],step[2]):
-                volSeg=matSeg[i:i+dSeg[0]-1,j:j+dSeg[1]-1,k:k+d[2]-1]
-                if np.sum(volSeg)<eps
+    for i in range(0,row-dSeg[0]+1,step[0]):
+        for j in range(0,col-dSeg[1]+1,step[1]):
+            for k in range(0,len-dSeg[2]+1,step[2]):
+                volSeg=matSeg[i:i+dSeg[0],j:j+dSeg[1],k:k+dSeg[2]]
+                if np.sum(volSeg)<eps:
                     continue
                 cubicCnt=cubicCnt+1
-                volFA=matFA[i:i+dFA[0]-1,j:j+dFA[1]-1,k:k+dFA[2]-1]
+                volFA=matFA[i:i+dFA[0],j:j+dFA[1],k:k+dFA[2]]
                 trainFA[:,:,:,1,cubicCnt]=volFA
                 trainSeg[:,:,:,1,cubicCnt]=volSeg
-    trainFA=float(trainFA)
-    trainSeg=float(trainSeg)
+    #trainFA=float(trainFA)
+    #trainSeg=float(trainSeg)
     with h5py.File('./train_%s.h5'%fileID,'w') as f:
         f['dataMR']=trainFA
         f['dataSeg']=trainSeg
