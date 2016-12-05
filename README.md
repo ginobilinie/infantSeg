@@ -27,6 +27,6 @@ Basic steps:
 
 3. train the network with caffe
 
-4. evaluate the caffe model with readMedImg4CaffeCropNie.py, I store them in nifti format.
+4. evaluate the caffe model with readMedImg4CaffeCropNie4SingleS.py, I store them in nifti format.
 
 
