@@ -9,6 +9,10 @@ readMedImg4CaffeCropNie.py: this is the code to extract 3d patches from a medica
 
 evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one).
 
+transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab).
+
+transImage.py: this is written to transpose (permute in matlab) the dimension order of a medical image.
+
 infant_train_test.prototxt: define the network architecture
 
 infant_solver.prototxt: define the network hyperparameters
