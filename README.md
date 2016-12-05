@@ -30,3 +30,4 @@ Basic steps:
 4. evaluate the caffe model with evalCaffeModel4ImgNie.py, I store them in nifti format.
 
 
+If you think it is useful for you, please star it. haha
