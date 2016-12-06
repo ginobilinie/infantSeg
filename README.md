@@ -23,11 +23,10 @@ Basic steps:
 
 1. crop patches from medical image data with readMedImg4CaffeCropNie4SingleS.py, I use SimpleITK as readers.
 
-2. prepare the network: define infant_train_test.prototxt, and decide infant_solver.prototxt
+2. prepare the network: define infant_train_test.prototxt, and decide infant_solver.prototxt. And if your network is convolution-free (which I mean is MLP), you can refer to my another proj: https://github.com/ginobilinie/psychoTraitPrediction 
 
 3. train the network with caffe
 
 4. evaluate the caffe model with evalCaffeModel4ImgNie.py, I store them in nifti format.
-
 
 If you think it is useful for you, please star it. haha
