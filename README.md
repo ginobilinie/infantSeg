@@ -17,21 +17,21 @@ If you think it is useful for you, please star it. HAHA.
 
 Here is a list of what the files mean:
 
-evalCaffeModels4MedImg.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients. 
+a. evalCaffeModels4MedImg.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients. 
 
-readMedImg4CaffeCropNie.py: this is the code to extract 3d patches from a medical image (mri/ct and so on) for patients. Note, I am not that sure if this contains error or not (I wrote too many versions, I donot remember which version it is), if it contains, please let me know by QQ. 
+b. readMedImg4CaffeCropNie.py: this is the code to extract 3d patches from a medical image (mri/ct and so on) for patients. Note, I am not that sure if this contains error or not (I wrote too many versions, I donot remember which version it is), if it contains, please let me know by QQ. 
 
-readMedImg4CaffeCropNie4SingleS.py: implement the crop patches function, and this one is much better than readMedImg4CaffeCropNie.py, so I suggest you use this one.
+c. readMedImg4CaffeCropNie4SingleS.py: implement the crop patches function, and this one is much better than readMedImg4CaffeCropNie.py, so I suggest you use this one.
 
-evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one).
+d. evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one).
 
-transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab).
+e. transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab).
 
-transImage.py: this is written to transpose (permute in matlab) the dimension order of a medical image.
+f. transImage.py: this is written to transpose (permute in matlab) the dimension order of a medical image.
 
-convertMat2MedFormat.py: convert mat files (matlab) to medical image format, such as nifti, hdr and so on
+g. convertMat2MedFormat.py: convert mat files (matlab) to medical image format, such as nifti, hdr and so on
 
-infant_train_test.prototxt: define the network architecture
+h. infant_train_test.prototxt: define the network architecture
 
-infant_solver.prototxt: define the network hyperparameters
+i. infant_solver.prototxt: define the network hyperparameters
 
