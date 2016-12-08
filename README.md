@@ -25,7 +25,7 @@ c. readMedImg4CaffeCropNie4SingleS.py: implement the crop patches function, and 
 
 d. evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one).
 
-e. transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab).
+e. transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab). Actually, you can also check the hdf5 format data if the label and feature match or not...
 
 f. transImage.py: this is written to transpose (permute in matlab) the dimension order of a medical image.
 
