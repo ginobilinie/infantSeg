@@ -15,7 +15,7 @@ Basic steps:
 
 If you think it is useful for you, please star it. HAHA.
 
-Here is a list of what the files mean:
+Here is a list of what the network related files mean:
 
 a. infant_train_test.prototxt: define the network architecture
 
