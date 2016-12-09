@@ -18,7 +18,7 @@ If you think it is useful for you, please star it. HAHA. And you can cite this p
 Nie, Dong, et al. "Fully convolutional networks for multi-modality isointense infant brain image segmentation." Biomedical Imaging (ISBI), 2016 IEEE 13th International Symposium on. IEEE, 2016.
 
 
-................................................................................................................................................................................................................................................................................
+.........................................................................................................................................................................................................................................................
 
 Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience how to write them and where we need be careful:
 
@@ -31,12 +31,16 @@ fully connected layer setting: refer to prototxt in https://github.com/ginobilin
 ....
 
 b. infant_solver.prototxt: define the network hyperparameters
-The basic parameters you should take care is learning rate (lr), and learning rate decay strategy (learning_policy: fixed or step), momutum: you can set by 0.9 as default, stepsize( this is necessary when you set the learning policy as step, which means it will decrease gamma times when it reaches every stepsize steps), maxIter should be the maximum iterations for the network to train, usually you can set two times as large as you dataset, and if you want to use other optimization instead of SGD, you have to set 'type', for example, type: "Adam".
+The most important parameters you should take care is learning rate (lr), and learning rate decay strategy (learning_policy: fixed or step).  stepsize( this is necessary when you set the learning policy as step, which means it will decrease gamma times when it reaches every stepsize steps).</br>
+momutum: you can set by 0.9 as default.</br>
+maxIter should be the maximum iterations for the network to train, usually you can set two times as large as you dataset.</br>
+And if you want to use other optimization instead of SGD, you have to set 'type', for example, type: "Adam".</br>
 
 c. infant_deploy.prototxt: the deploy prototxt when you want to evaluate your trained caffe model.
-You only have to make two changes based on the train_test.prototxt: input (replace the original input (e.g., HDF5) with the dimension described format which I have a example in infant_deploy.prototxt, and also, you have to replace to output softmaxWithLoss with softmax layer.
-
-................................................................................................................................................................................................................................................................................
+You only have to make two changes based on the train_test.prototxt: 
+input (replace the original input (e.g., HDF5) with the dimension described format which I have a example in infant_deploy.prototxt.</br>
+and also, you have to replace to output softmaxWithLoss with softmax layer.</br>
+...........................................................................................................................................................................................................................................................
 
 Here are some codes you may want to use:
 
