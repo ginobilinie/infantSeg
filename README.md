@@ -22,12 +22,12 @@ Nie, Dong, et al. "Fully convolutional networks for multi-modality isointense in
 
 Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience how to write them and where we need be careful:
 
-a. infant_train_test.prototxt: define the network architecture
-The architecture actually is not hard to define, 
-number of total layers: the number of layers could be easily initially decided, you can just make the receptive field for the last layer as large as the input. Of course, you should search what receptive field is, and I can give you a suggestion one to read: https://www.quora.com/What-is-a-receptive-field-in-a-convolutional-neural-network.
-convolution paramter settings: just see my example (infant_train_test.prototxt), and you can improve it based on this, for example, you can use other initialization methods (I like to use Xavier, you can use others) 
-activation function: ReLU
-fully connected layer setting: refer to prototxt in https://github.com/ginobilinie/psychoTraitPrediction 
+a. infant_train_test.prototxt: define the network architecture＜/br＞
+The architecture actually is not hard to define, ＜/br＞
+number of total layers: the number of layers could be easily initially decided, you can just make the receptive field for the last layer as large as the input. Of course, you should search what receptive field is, and I can give you a suggestion one to read: https://www.quora.com/What-is-a-receptive-field-in-a-convolutional-neural-network.＜/br＞
+convolution paramter settings: just see my example (infant_train_test.prototxt), and you can improve it based on this, for example, you can use other initialization methods (I like to use Xavier, you can use others) ＜/br＞
+activation function: ReLU＜/br＞
+fully connected layer setting: refer to prototxt in https://github.com/ginobilinie/psychoTraitPrediction . ＜/br＞
 ....
 
 b. infant_solver.prototxt: define the network hyperparameters
