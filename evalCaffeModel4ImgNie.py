@@ -18,7 +18,7 @@ import scipy.io as scio
 
 # Make sure that caffe is on the python path:
 #caffe_root = '/usr/local/caffe3/'  # this is the path in GPU server
-caffe_root = '/home/dongnie/caffe3D/'  # this is the path in GPU server
+caffe_root = '//usr/local/caffe3/'  # this is the path in GPU server
 import sys
 sys.path.insert(0, caffe_root + 'python')
 print caffe_root + 'python'
