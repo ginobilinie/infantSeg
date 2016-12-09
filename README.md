@@ -41,7 +41,7 @@ input (replace the original input (e.g., HDF5) with the dimension described form
 and also, you have to replace to output softmaxWithLoss with softmax layer.</br>
 ...........................................................................................................................................................................................................................................................
 
-Here are some codes you may want to use:
+Here are some codes you may want to use: If you have no IDE for python, I suggestion you use Eclipse+pyDev as editor and compiler for python codes:
 
 a. evalCaffeModels4MedImg.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients. 
 
