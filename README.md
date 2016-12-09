@@ -18,7 +18,8 @@ If you think it is useful for you, please star it. HAHA. And you can cite this p
 Nie, Dong, et al. "Fully convolutional networks for multi-modality isointense infant brain image segmentation." Biomedical Imaging (ISBI), 2016 IEEE 13th International Symposium on. IEEE, 2016.
 
 
-............................................................................................................................................
+........................................................................................................................................
+
 Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience how to write them and where we need be careful:
 
 a. infant_train_test.prototxt: define the network architecture
@@ -36,6 +37,7 @@ c. infant_deploy.prototxt: the deploy prototxt when you want to evaluate your tr
 You only have to make two changes based on the train_test.prototxt: input (replace the original input (e.g., HDF5) with the dimension described format which I have a example in infant_deploy.prototxt, and also, you have to replace to output softmaxWithLoss with softmax layer.
 
 ....................................................................................................................................
+
 Here are some codes you may want to use:
 
 a. evalCaffeModels4MedImg.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients. 
