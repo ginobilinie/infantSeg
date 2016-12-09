@@ -30,7 +30,7 @@ b. infant_solver.prototxt: define the network hyperparameters
 The basic parameters you should take care is learning rate (lr), and learning rate decay strategy (learning_policy: fixed or step), momutum: you can set by 0.9 as default, stepsize( this is necessary when you set the learning policy as step, which means it will decrease gamma times when it reaches every stepsize steps), maxIter should be the maximum iterations for the network to train, usually you can set two times as large as you dataset, and if you want to use other optimization instead of SGD, you have to set 'type', for example, type: "Adam".
 
 c. infant_deploy.prototxt: the deploy prototxt when you want to evaluate your trained caffe model.
-You only have to make two changes: input (replace the original input (e.g., HDF5) with the dimension described format which I have a example in infant_deploy.prototxt, and also, you have to replace to output softmaxWithLoss with softmax layer.
+You only have to make two changes based on the train_test.prototxt: input (replace the original input (e.g., HDF5) with the dimension described format which I have a example in infant_deploy.prototxt, and also, you have to replace to output softmaxWithLoss with softmax layer.
 
 ....................................................................................................................................
 Here are some codes you may want to use:
