@@ -49,7 +49,7 @@ b. readMedImg4CaffeCropNie.py: this is the code to extract 3d patches from a med
 
 c. readMedImg4CaffeCropNie4SingleS.py: implement the crop patches function, and this one is much better than readMedImg4CaffeCropNie.py, so I suggest you use this one.
 
-d. evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one).
+d. evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one). And if you want to read the intermedia layer's output, you can specify it by "temppremat = mynet.blobs['layername'].data[0]".
 
 e. transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab). Actually, you can also check the hdf5 format data if the label and feature match or not...
 
