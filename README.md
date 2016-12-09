@@ -15,12 +15,24 @@ Basic steps:
 
 If you think it is useful for you, please star it. HAHA.
 
-Here is a list of what the network related files mean:
+.......................................................................................................................................
+Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience how to write them and where we need be careful:
 
 a. infant_train_test.prototxt: define the network architecture
+The architecture actually is not hard to define, 
+number of total layers: the number of layers could be easily initially decided, you can just make the receptive field for the last layer as large as the input. Of course, you should search what receptive field is, and I can give you a suggestion one to read: https://www.quora.com/What-is-a-receptive-field-in-a-convolutional-neural-network.
+convolution paramter settings: just see my example (infant_train_test.prototxt), and you can improve it based on this, for example, you can use other initialization methods (I like to use Xavier, you can use others) 
+activation function: ReLU
+fully connected layer setting: refer to prototxt in https://github.com/ginobilinie/psychoTraitPrediction 
+....
 
 b. infant_solver.prototxt: define the network hyperparameters
+The basic parameters you should take care is learning rate (lr), and learning rate decay strategy (learning_policy: fixed or step), momutum: you can set by 0.9 as default, stepsize( this is necessary when you set the learning policy as step, which means it will decrease gamma times when it reaches every stepsize steps), maxIter should be the maximum iterations for the network to train, usually you can set two times as large as you dataset, and if you want to use other optimization instead of SGD, you have to set 'type', for example, type: "Adam".
 
+c. infant_deploy.prototxt: the deploy prototxt when you want to evaluate your trained caffe model.
+You only have to make two changes: input (replace the original input (e.g., HDF5) with the dimension described format which I have a example in infant_deploy.prototxt, and also, you have to replace to output softmaxWithLoss with softmax layer.
+
+....................................................................................................................................
 Here are some codes you may want to use:
 
 a. evalCaffeModels4MedImg.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients. 
