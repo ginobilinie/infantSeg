@@ -18,7 +18,7 @@ If you think it is useful for you, please star it. HAHA. And you can cite this p
 Nie, Dong, et al. "Fully convolutional networks for multi-modality isointense infant brain image segmentation." Biomedical Imaging (ISBI), 2016 IEEE 13th International Symposium on. IEEE, 2016.
 
 
-.......................................................................................................................................
+............................................................................................................................................
 Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience how to write them and where we need be careful:
 
 a. infant_train_test.prototxt: define the network architecture
