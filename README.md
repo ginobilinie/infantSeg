@@ -29,13 +29,13 @@ activation function: ReLU</br>
 fully connected layer setting: refer to prototxt in https://github.com/ginobilinie/psychoTraitPrediction . </br>
 ....
 
-b. infant_solver.prototxt: define the network hyperparameters
+b. infant_solver.prototxt: define the network hyperparameters</br>
 The most important parameters you should take care is learning rate (lr), and learning rate decay strategy (learning_policy: fixed or step).  stepsize( this is necessary when you set the learning policy as step, which means it will decrease gamma times when it reaches every stepsize steps).</br>
 momutum: you can set by 0.9 as default.</br>
 maxIter should be the maximum iterations for the network to train, usually you can set two times as large as you dataset.</br>
 And if you want to use other optimization instead of SGD, you have to set 'type', for example, type: "Adam".</br>
 
-c. infant_deploy.prototxt: the deploy prototxt when you want to evaluate your trained caffe model.
+c. infant_deploy.prototxt: the deploy prototxt when you want to evaluate your trained caffe model.</br>
 You only have to make two changes based on the train_test.prototxt: 
 input (replace the original input (e.g., HDF5) with the dimension described format which I have a example in infant_deploy.prototxt.</br>
 and also, you have to replace to output softmaxWithLoss with softmax layer.</br>
@@ -60,13 +60,17 @@ Just use finetune_infant.sh to run it.
 
 a. evalCaffeModels4MedImg.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients. 
 
-b. readMedImg4CaffeCropNie.py: this is the code to extract 3d patches from a medical image (mri/ct and so on) for patients. Note, I am not that sure if this contains error or not (I wrote too many versions, I donot remember which version it is), if it contains, please let me know by QQ. 
+b. readMedImg4CaffeCropNie.py: this is the code to extract 3d patches from a medical image (mri/ct and so on) for patients. </br>
+Note, I am not that sure if this contains error or not (I wrote too many versions, I donot remember which version it is), if it contains, please let me know by QQ. 
 
-c. readMedImg4CaffeCropNie4SingleS.py: implement the crop patches function, and this one is much better than readMedImg4CaffeCropNie.py, so I suggest you use this one.
+c. readMedImg4CaffeCropNie4SingleS.py: implement the crop patches function. </br>
+And this one is much better than readMedImg4CaffeCropNie.py, so I suggest you use this one.
 
-d. evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one). And if you want to read the intermedia layer's output, you can specify it by "temppremat = mynet.blobs['layername'].data[0]".
+d. evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one).</br>
+And if you want to read the intermedia layer's output, you can specify it by "temppremat = mynet.blobs['layername'].data[0]".
 
-e. transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab). Actually, you can also check the hdf5 format data if the label and feature match or not...
+e. transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab). </br>
+Actually, you can also check the hdf5 format data if the label and feature match or not...
 
 f. transImage.py: this is written to transpose (permute in matlab) the dimension order of a medical image.
 
