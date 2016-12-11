@@ -19,7 +19,7 @@ If you think it is useful for you, please star it. HAHA. And you can cite this p
 
 .........................................................................................................................................................................................................................................................
 
-<B>Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience how to write them and where we need be careful:<B>
+<B>Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience how to write them and where we need be careful:</B>
 
 a. infant_train_test.prototxt: define the network architecture</br>
 The architecture actually is not hard to define, </br>
@@ -43,7 +43,7 @@ and also, you have to replace to output softmaxWithLoss with softmax layer.</br>
 d. infant_train_test_finetune.prototxt: finetune prototxt when you want to use previous model the initialize the training of a new model.</br>
 Notice that we should keep almost everything (instead of learning rate) of the layers you like to initialize the same between the old trained model and the new model, and then you can add new layers in the new model. compare the infant_train_test_finetune.prototxt and infant_train_test.prototxt, you will know how it works.
 
-<B>How to train/resume/finetune:<B>
+<B>How to train/resume/finetune:</B>
 
 a. train_infant.sh: shell code to train the model
 
@@ -56,7 +56,7 @@ If you like to train a new model, and you like to fix the first several layers's
 Just use finetune_infant.sh to run it. 
 ...........................................................................................................................................................................................................................................................
 
-<B>Here are some codes you may want to use: If you have no IDE for python, I suggestion you use Eclipse+pyDev as editor and compiler for python codes:<B>
+<B>Here are some codes you may want to use: If you have no IDE for python, I suggestion you use Eclipse+pyDev as editor and compiler for python codes:</B>
 
 a. evalCaffeModels4MedImg.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients. 
 
