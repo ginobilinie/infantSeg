@@ -39,6 +39,18 @@ c. infant_deploy.prototxt: the deploy prototxt when you want to evaluate your tr
 You only have to make two changes based on the train_test.prototxt: 
 input (replace the original input (e.g., HDF5) with the dimension described format which I have a example in infant_deploy.prototxt.</br>
 and also, you have to replace to output softmaxWithLoss with softmax layer.</br>
+
+How to train/resume/finetune:
+
+a. train_infant.sh: shell code to train the model
+
+b. resume_infant.sh: resume a previous trained model.
+If your training is broken by something else, then you should not train from scratch, instead, you can resume the training.
+
+c. finetune_infant.sh: finetune a previous trained model.
+If you can have more dataset, and then you'd like to finetune the previous trained model, and then you can finetune the trained model. </br>
+If you like to train a new model, and you like to fix the first several layers's weights, just train some layers or some new layers, you can also use finetune. In this case, I have edited a infant_train_test_finetune.prototxt, in which the learning rate of the fixing layers is set to 0 (then you can fix these layers' weights, and then finetue it. 
+Just use finetune_infant.sh to run it. 
 ...........................................................................................................................................................................................................................................................
 
 Here are some codes you may want to use: If you have no IDE for python, I suggestion you use Eclipse+pyDev as editor and compiler for python codes:
