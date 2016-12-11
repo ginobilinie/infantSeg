@@ -74,3 +74,5 @@ g. convertMat2MedFormat.py: convert mat files (matlab) to medical image format, 
 
 h. checkHDF5.py: check the hdf5 files you generated to find if there are something wrong (e.g., matched or not)
 
+i. imgUtils.py: compute dice/psnr for medical images
+
