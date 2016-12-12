@@ -67,7 +67,7 @@ c. readMedImg4CaffeCropNie4SingleS.py: implement the crop patches function. </br
 And this one is much better than readMedImg4CaffeCropNie.py, so I suggest you use this one.
 
 d. evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one).</br>
-And if you want to read the intermedia layer's output, you can specify it by "temppremat = mynet.blobs['layername'].data[0]".
+And if you want to read the intermedia layer's output, you can specify it by "temppremat = mynet.blobs['layername'].data[0]". Actually, the size of patch is not limited to the size during training, you can make a bigger patch size (than patch size at training stage).
 
 e. transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab). </br>
 Actually, you can also check the hdf5 format data if the label and feature match or not...
@@ -79,4 +79,7 @@ g. convertMat2MedFormat.py: convert mat files (matlab) to medical image format, 
 h. checkHDF5.py: check the hdf5 files you generated to find if there are something wrong (e.g., matched or not)
 
 i. imgUtils.py: compute dice/psnr for medical images
+
+k. evalCaffeModel4WholeImgNieSingleS.py Here I take whole image as input
+Note, in evalCaffeModel4ImgNie.py, I take a single patch as input, as there are so many patches, it is a little slow, so I now utilize full image as input, but you have to change the deploy prototxt accordingly (just adjust the input dimension).
 
