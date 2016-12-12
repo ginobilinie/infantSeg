@@ -86,7 +86,7 @@ def cropCubic(matFA,matSeg,fileID,d,step,rate):
                 
                 volFA=matFAOut[i:i+dFA[0],j:j+dFA[1],k:k+dFA[2]]
               
-                trainFA[cubicCnt,0:,:,:]=volFA #32*32*32
+                trainFA[cubicCnt,0,:,:,:]=volFA #32*32*32
             
                 trainSeg[cubicCnt,0,:,:,:]=volSeg#24*24*24
 
