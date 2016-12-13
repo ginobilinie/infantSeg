@@ -16,7 +16,7 @@ Basic steps:
 If you think it is useful for you, please star it. HAHA. And you can cite this paper (this paper is a simplified version of our paper, a better version is under review by a journal, I'll notify you if it is AC):</br>
 "Nie, Dong, et al. "Fully convolutional networks for multi-modality isointense infant brain image segmentation." Biomedical Imaging (ISBI), 2016 IEEE 13th International Symposium on. IEEE, 2016."
 
-If you want to do projects with caffe in the server, please first refer to http://on-demand.gputechconf.com/gtc/2015/webinar/deep-learning-course/getting-started-with-caffe.pdf (if you are familiar with caffe, you donot need to read it). And I will introduce detailed steps for developing deep learning applications in medical image analysis with our server based caffe in the following steps.
+If you want to do projects with caffe in the server, please first refer to http://on-demand.gputechconf.com/gtc/2015/webinar/deep-learning-course/getting-started-with-caffe.pdf (if you are familiar with caffe, please ignore it). And I will introduce detailed steps for developing deep learning applications in medical image analysis with our server based caffe in the following steps.
 .........................................................................................................................................................................................................................................................
 
 <B>Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience how to write them and where we need be careful:</B>
