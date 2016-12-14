@@ -54,6 +54,8 @@ c. finetune_infant.sh: finetune a previous trained model</br>
 If you can have more dataset, and then you'd like to finetune the previous trained model, and then you can finetune the trained model. </br>
 If you like to train a new model, and you like to fix the first several layers's weights, just train some layers or some new layers, you can also use finetune. In this case, I have edited a infant_train_test_finetune.prototxt, in which the learning rate of the fixing layers is set to 0 (then you can fix these layers' weights, and then finetue it. 
 Just use finetune_infant.sh to run it. 
+
+d. If you would like to save the output of screen during training or testing, you can do like this: nohup bash train_infant.sh >logTrain.txt 2>&1 & </br>
 ...........................................................................................................................................................................................................................................................
 
 <B>Here are some codes you may want to use: If you have no IDE for python, I suggestion you use Eclipse+pyDev as editor and compiler for python codes:</B>
