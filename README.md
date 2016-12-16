@@ -30,7 +30,7 @@ fully connected layer setting: refer to prototxt in https://github.com/ginobilin
 ....
 
 b. infant_solver.prototxt: define the network hyperparameters</br>
-The most important parameters you should take care is learning rate (lr), and learning rate decay strategy (learning_policy: fixed or step).  stepsize( this is necessary when you set the learning policy as step, which means it will decrease gamma times when it reaches every stepsize steps).</br>
+The most important parameters you should take care is learning rate (lr), and learning rate decay strategy (learning_policy: fixed or step or inv, I have examples in this prototxt).  stepsize( this is necessary when you set the learning policy as step, which means it will decrease gamma times when it reaches every stepsize steps).</br>
 momutum: you can set by 0.9 as default.</br>
 maxIter should be the maximum iterations for the network to train, usually you can set two times as large as you dataset.</br>
 And if you want to use other optimization instead of SGD, you have to set 'type', for example, type: "Adam".</br>
