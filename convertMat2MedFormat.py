@@ -1,3 +1,7 @@
+'''
+Written to convert mat format file (matlab) to medical format (nii, hdr, mhd and so on)
+Dong Nie
+'''
 import SimpleITK as sitk
 from multiprocessing import Pool
 import os
