@@ -84,5 +84,5 @@ h. checkHDF5.py: check the hdf5 files you generated to find if there are somethi
 i. imgUtils.py: compute dice/psnr for medical images
 
 k. evalCaffeModel4WholeImgNieSingleS.py Here I take whole image as input
-Note, in evalCaffeModel4ImgNie.py, I take a single patch as input, as there are so many patches, it is a little slow, so I now utilize full image as input, but you have to change the deploy prototxt accordingly (just adjust the input dimension).
+Note, in evalCaffeModel4ImgNie.py, I take a single patch as input, as there are so many patches, it is a little slow, so I now utilize full image as input, but you have to change the deploy prototxt accordingly (just adjust the input dimension). <B>Here, we should keep the order for dimension of the data same with the order of training data (patch).</B>
 
