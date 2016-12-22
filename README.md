@@ -58,7 +58,7 @@ Just use finetune_infant.sh to run it.
 d. If you would like to save the output of screen during training or testing, you can do like this: </br>
 nohup bash train_infant.sh >logTrain.txt 2>&1 & </br>
 
-e. trainCaffe.py: You can also train the caffe models with python codes. In this copy of codes, you can also display the network and network parameters.</br>
+e. trainCaffe.py: You can also <B>train the caffe models with python codes</B>. In this copy of codes, you can also display the network and network parameters.</br>
 
 ...........................................................................................................................................................................................................................................................
 
