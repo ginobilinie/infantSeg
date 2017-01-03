@@ -9,7 +9,7 @@ Basic steps:
 
 2. prepare the network: define infant_train_test.prototxt, and decide infant_solver.prototxt. And if your network is convolution-free (which I mean is MLP), you can refer to my another proj: https://github.com/ginobilinie/psychoTraitPrediction 
 
-3. train the network with caffe
+3. train the network with caffe (actually, I also suggestion you try Keras, it is really the simplest deep learning tool I have ever seen, if you are a beginner, Keras may be your best choice).
 
 4. evaluate the caffe model with evalCaffeModel4ImgNie.py, I store them in nifti format.
 
@@ -19,7 +19,7 @@ If you think it is useful for you, please star it. HAHA. And you can cite this p
 If you want to do projects with caffe in the server, please first refer to http://on-demand.gputechconf.com/gtc/2015/webinar/deep-learning-course/getting-started-with-caffe.pdf (if you are familiar with caffe, please ignore it). And I will introduce detailed steps for developing deep learning applications in medical image analysis with our server based caffe in the following steps.
 .........................................................................................................................................................................................................................................................
 
-<B>Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience how to write them and where we need be careful:</B>
+<B>Here is a list of what the network related files mean, and for the below thre prototxt, I'd like to share some basic experience about how to write them and where we need be careful:</B>
 
 a. infant_train_test.prototxt: define the network architecture</br>
 The architecture actually is not hard to define, </br>
