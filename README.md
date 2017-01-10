@@ -43,6 +43,12 @@ and also, you have to replace to output softmaxWithLoss with softmax layer.</br>
 d. infant_train_test_finetune.prototxt: finetune prototxt when you want to use previous model the initialize the training of a new model.</br>
 Notice that we should keep almost everything (instead of learning rate) of the layers you like to initialize the same between the old trained model and the new model, and then you can add new layers in the new model. compare the infant_train_test_finetune.prototxt and infant_train_test.prototxt, you will know how it works.
 
+e. infant_train_test_point.prototxt: define the network architecture</br>
+The architecture is for CNN, and it is not hard to define, </br>
+number of total layers: the number of layers could be easily initially decided, you can just make the receptive field for the last layer as large as the input. Of course, you should search what receptive field is, and I can give you a suggestion one to read: https://www.quora.com/What-is-a-receptive-field-in-a-convolutional-neural-network.</br>
+convolution paramter settings: just see my example (infant_train_test.prototxt), and you can improve it based on this, for example, you can use other initialization methods (I like to use Xavier, you can use others) </br>
+activation function: ReLU</br>
+
 <B>How to train/resume/finetune:</B>
 
 a. train_infant.sh: shell code to train the model
