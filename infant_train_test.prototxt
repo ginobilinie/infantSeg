@@ -289,7 +289,7 @@ layer {
     lr_mult: 2
   }
   convolution_param {
-    num_output: 4 
+    num_output: 32 
     #bias_term: false
     engine: CAFFE
     kernel_size: 4
@@ -320,7 +320,7 @@ layer {
     lr_mult: 2
   }
   convolution_param {
-    num_output: 4
+    num_output: 32
     #bias_term: false
     engine: CAFFE
     kernel_size: 4
