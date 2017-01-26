@@ -49,6 +49,8 @@ number of total layers: the number of layers could be easily initially decided, 
 convolution paramter settings: just see my example (infant_train_test.prototxt), and you can improve it based on this, for example, you can use other initialization methods (I like to use Xavier, you can use others) </br>
 activation function: ReLU</br>
 
+f. infant_train_test_unet.prototxt: define a unet-like architecture</br>
+
 <B>How to train/resume/finetune:</B>
 
 a. train_infant.sh: shell code to train the model
