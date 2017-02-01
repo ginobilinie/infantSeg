@@ -99,4 +99,6 @@ Note, in evalCaffeModel4ImgNie.py, I take a single patch as input, as there are 
 
 k: avgMedImg.py: average the medical image predictions, you can use average or majority voting to generate better predictions.
 
+l: readSomeTypeFiles.py: read some specific type of images in a certain directory.
+
 
