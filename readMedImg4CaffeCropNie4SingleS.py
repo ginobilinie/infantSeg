@@ -36,8 +36,8 @@ def cropCubic(matFA,matSeg,fileID,d,step,rate):
     [row,col,leng]=matFA.shape
     cubicCnt=0
     estNum=10000
-    trainFA=np.zeros([estNum,1, dFA[2],dFA[1],dFA[0]])
-    trainSeg=np.zeros([estNum,1,dSeg[2],dSeg[1],dSeg[0]])
+    trainFA=np.zeros([estNum,1, dFA[2],dFA[1],dFA[0]],dtype=np.float16)
+    trainSeg=np.zeros([estNum,1,dSeg[2],dSeg[1],dSeg[0]],dtype=np.int8)
     print 'trainFA shape, ',trainFA.shape
     #to padding for input
     margin1=(dFA[0]-dSeg[0])/2
