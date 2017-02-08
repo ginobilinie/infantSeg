@@ -10,6 +10,7 @@ Author: Dong Nie
 import SimpleITK as sitk
 
 from multiprocessing import Pool
+from imgUtils import dice
 import os
 import h5py
 import numpy as np  
