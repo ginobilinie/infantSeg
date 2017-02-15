@@ -2,7 +2,7 @@
 layer {
   name: "data"
   type: "HDF5Data"
-  top: "dataT1"
+  top: "dataMR"
   top: "dataSeg"
   include {
     phase: TRAIN 
