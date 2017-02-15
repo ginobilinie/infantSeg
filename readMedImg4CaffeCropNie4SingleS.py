@@ -19,7 +19,7 @@ d1=32
 d2=32
 d3=32
 dFA=[d1,d2,d3] # size of patches of input data
-dSeg=[24,24,24] # size of pathes of label data
+dSeg=[32,32,32] # size of pathes of label data
 step1=8
 step2=10
 step3=2
@@ -96,8 +96,8 @@ def cropCubic(matFA,matSeg,fileID,d,step,rate):
     trainSeg=trainSeg[0:cubicCnt,:,:,:,:]
 
     with h5py.File('./trainMS_%s.h5'%fileID,'w') as f:
-        f['dataMR32']=trainFA
-        f['dataSeg24']=trainSeg
+        f['dataMR']=trainFA
+        f['dataSeg']=trainSeg
      
     with open('./trainMS_list.txt','a') as f:
         f.write('./trainMS_%s.h5\n'%fileID)
