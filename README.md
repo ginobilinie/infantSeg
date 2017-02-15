@@ -80,7 +80,7 @@ Note, I am not that sure if this contains error or not (I wrote too many version
 c. readMedImg4CaffeCropNie4SingleS.py: implement the crop patches function. </br>
 And this one is much better than readMedImg4CaffeCropNie.py, so I suggest you use this one.
 
-d. evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (suggested using this one, it's good for classification task).</br>
+d. evalCaffeModel4ImgNie.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (<B>suggested using this one, it's good for classification task</B>).</br>
 And if you want to read the intermedia layer's output, you can specify it by "temppremat = mynet.blobs['layername'].data[0]". Actually, the size of patch is not limited to the size during training, you can make a bigger patch size (than patch size at training stage).
 
 e. transData.py: this is written to transpose (permute in matlab) the dimension order of the h5 (hdf5 in matlab). </br>
