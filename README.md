@@ -51,7 +51,7 @@ activation function: ReLU</br>
 
 f. infant_train_test_unet.prototxt: define a unet-like architecture</br>
 
-<B>How to train/resume/finetune:</B>
+<B>How to train/resume/finetune: (Note, to run it, you have to install caffe which support 3D operations)</B> 
 
 a. train_infant.sh: shell code to train the model
 
