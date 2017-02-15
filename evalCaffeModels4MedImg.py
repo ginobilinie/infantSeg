@@ -32,9 +32,9 @@ protopath='/your/path/to/prototxtfiles/'
 mynet = caffe.Net(protopath+'pelvic_deploy_3d.prototxt',protopath+'pelvic_fcn_3d_binary1_iter_276000.caffemodel',caffe.TEST)
 print("blobs {}\nparams {}".format(mynet.blobs.keys(), mynet.params.keys()))
 
-d1=5
-d2=184
-d3=112
+d1=32
+d2=32
+d3=32
 d=[d1,d2,d3]
 step1=1
 step2=1
