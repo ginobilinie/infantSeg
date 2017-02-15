@@ -36,6 +36,7 @@ d1=32
 d2=32
 d3=32
 d=[d1,d2,d3]
+#if it is too slow, adjust the step1, step2, step3 to 8 8 8 or other step size you like
 step1=1
 step2=1
 step3=1
