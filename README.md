@@ -103,4 +103,6 @@ k: avgMedImg.py: average the medical image predictions, you can use average or m
 
 l: readSomeTypeFiles.py: read some specific type of images in a certain directory.
 
+m: convertMed2Slice.py: convert nii.gz format to slices
+
 
