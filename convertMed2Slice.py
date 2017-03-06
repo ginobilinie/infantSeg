@@ -31,8 +31,8 @@ def main():
         gtOrg=sitk.ReadImage(gtfn)
         gtMat=sitk.GetArrayFromImage(gtOrg)
         print 'mat shape, ', gtMat.shape
-        for s in range(1,gtMat.shape[3]):
-            sliceMat=gtMat[:,:,s]
+        for s in range(1,gtMat.shape[0]):
+            sliceMat=gtMat[s-1,:,:]
             sliceMatScale = nd.interpolation.zoom(sliceMat, zoom=rate)
             scmi.imsave('p%d_'%id+'s%d.png'%s, sliceMat)
         #gtMat=np.transpose(gtMat,(2,1,0))
