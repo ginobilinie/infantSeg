@@ -63,7 +63,7 @@ class ScanFile(object):
         return subdir_list  
   
 if __name__=="__main__":  
-    dir=r"C:\os_path"  
+    dir=r"D:xxxx"  
     scan=ScanFile(dir)  
     subdirs=scan.scan_subdir()  
     files=scan.scan_files()  
