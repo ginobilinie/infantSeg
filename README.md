@@ -112,6 +112,7 @@ o: evalCaffeSegModel4MedImgbyMV.py: this is the code to evaluate a whole 3d imag
 p: evalCaffeSegModel4ImgNie.py: this is the code to evaluate a whole 3d image <B>segmentation</B> on the trained DL models for the patients (<B>suggested using this one, it's good for classification task, but the overlapping part is implemented via averaging, if you like majority voting, please use evalCaffeSegModel4MedImgbyMV.py</B>).</br>
 And if you want to read the intermedia layer's output, you can specify it by "temppremat = mynet.blobs['layername'].data[0]". Actually, the size of patch is not limited to the size during training, you can make a bigger patch size (than patch size at training stage).
 
-q: sepFiles.py: preprocess the files. make directories, cp specific files to each of the files.
+q: sepFiles.py: preprocess the files. make directories, cp specific files to each of the filespr
+renameFiles.py: preprocess the files: rename files
 
 
