@@ -118,7 +118,7 @@ def cropCubic(matFA,matMR,matSeg,fileID,d,step,rate):
                     currLabelMat = np.where(temppremat==labelInd, 1, 0) # true, vote for 1, otherwise 0
                     matOut[i:i+d[0],j:j+d[1],k:k+d[2],labelInd]=matOut[i:i+d[0],j:j+d[1],k:k+d[2],labelInd]+currLabelMat;
     
-    matOut=matOut.argmax(axis=NumOfClass-1)
+    matOut=matOut.argmax(axis=3) #always 3
 #     matOut=matOut/used
 #     matOut=np.rint(matOut)
     matOut=np.transpose(matOut,(2,1,0))
