@@ -119,6 +119,7 @@ def cropCubic(matFA,matMR,matSeg,fileID,d,step,rate):
                     matOut[i:i+d[0],j:j+d[1],k:k+d[2],labelInd]=matOut[i:i+d[0],j:j+d[1],k:k+d[2],labelInd]+currLabelMat;
     
     matOut=matOut.argmax(axis=3) #always 3
+    matOut=np.rint(matOut) #this line is necessary, it is very important, because it will convert datatype to make the nii.gz correct, otherwise, will appear strage shape
 #     matOut=matOut/used
 #     matOut=np.rint(matOut)
     matOut=np.transpose(matOut,(2,1,0))
