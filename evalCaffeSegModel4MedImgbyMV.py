@@ -2,10 +2,12 @@
 '''
 Target: evaluate your trained caffe model with the medical images. I use simpleITK to read medical images (hdr, nii, nii.gz, mha and so on)  
 Created on March 6th, 2017
+Corrected on June 25th, 2017
 Author: Dong Nie 
 Note, this is specified for classifying, so I implement the majority voting so that the performance would be stable if highly overlap happens
 Also, the input patch can larger than output patch
 Moreover, this can be used to generate single-scale or multi-scale
+Now, this copy of code can be successfully run!!!!
 '''
 
 
