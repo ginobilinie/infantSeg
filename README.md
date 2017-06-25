@@ -103,7 +103,7 @@ k: avgMedImg.py: average the medical image predictions, you can use average or m
 
 l: readSomeTypeFiles.py: read some specific type of images in a certain directory.
 
-m: evalCaffeModel4ImgNieSingSbyMV.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (<B>suggested using this one, it's good for classification task, Note the overlapping part is implemented via majority voting, if you like averaging, please use evalCaffeModel4ImgNie.py</B>).</br>
+m: evalCaffeModel4ImgNieSingSbyMV.py: this is the code to evaluate a whole 3d image on the trained DL models for the patients (<B>this is for classification task, but I suggest you use evalCaffeSegModel4MedImgbyMV.py when it is classification/segmentation task. Note the overlapping part is implemented via majority voting, if you like averaging, please use evalCaffeModel4ImgNie.py</B>).</br>
 
 n: convertMed2Slice.py: convert nii.gz format to slices
 
