@@ -1,11 +1,16 @@
 # The train/test net protocol buffer definition
 net: "infant_train_test.prototxt"
+
 # test_iter specifies how many forward passes the test should carry out.
 # In the case of iris, we have test batch size 10 (specified in iris_network.prototxt)
 # and 100 test iterations covering the full 50 test vectors.
 test_iter: 100
 # Carry out testing every 1000 training iterations.
 test_interval: 1000
+#every time, we extract iter_size number of iters to estimate the gradient, 
+#as we cannot use big batchsize, this can make up it.
+iter_size: 3
+
 # The base learning rate, momentum and the weight decay of the network.
 base_lr: 0.001
 momentum: 0.9
