@@ -732,7 +732,7 @@ layer {
   bottom: "conv6_3"
   bottom: "dataSeg"
   top: "loss"
-  softmax_lossw_param {
+  multi_task_softmax_loss_param {
     weight_labels: 0
     weight_labels: 1
     weight_labels: 2 
