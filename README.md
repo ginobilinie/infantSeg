@@ -55,7 +55,7 @@ g. infant_train_test_singleModality.prototxt: a FCN/unet architecture, but it is
 
 h. infant_train_test_bn.prototxt: a FCN architecture with Bacth Normalization
 
-i: infant_train_test_unet_bn.prototxt: a Unet architecture with Batch Normalization
+i: infant_train_test_unet_bn.prototxt: a Unet architecture with Batch Normalization <B>This is a prototxt achieving good performance and I designed in late 2015 (or early 2016).</B>
 
 <B>How to train/resume/finetune: (Note, to run it, you have to install caffe which support 3D operations)</B> 
 
