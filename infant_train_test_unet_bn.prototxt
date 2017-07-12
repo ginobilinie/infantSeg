@@ -725,6 +725,7 @@ layer {
   include: { phase: TEST }
 }
 #or you can use the following weight loss ##
+#############################################
 layer {
   name: "loss"
   type: "MultiTaskSoftmaxWithLoss"
@@ -749,7 +750,7 @@ layer {
   }
   #include: { phase: TEST }
 }
-
+##################################
 #layer {
 #  name: "frscore"
 #  type: "Crop"
