@@ -724,6 +724,31 @@ layer {
   }
   include: { phase: TEST }
 }
+#or you can use the following weight loss ##
+layer {
+  name: "loss"
+  type: "MultiTaskSoftmaxWithLoss"
+  bottom: "conv6_3"
+  bottom: "dataSeg"
+  top: "loss"
+  softmax_lossw_param {
+    weight_labels: 0
+    weight_labels: 1
+    weight_labels: 2 
+    weight_labels: 3
+    labels_weight: 0.1
+    labels_weight: 2 
+    labels_weight: 4 
+    labels_weight: 3
+  }
+  loss_param {
+    ignore_label: -1
+  }
+  softmax_param {
+    axis: 1
+  }
+  #include: { phase: TEST }
+}
 
 #layer {
 #  name: "frscore"
