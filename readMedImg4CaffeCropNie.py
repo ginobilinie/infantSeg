@@ -62,8 +62,8 @@ def cropCubic(matFA,matSeg,fileID,d,step,rate):
                     continue
                 cubicCnt=cubicCnt+1
                 volFA=matFA[i:i+dFA[0],j:j+dFA[1],k:k+dFA[2]]
-                trainFA[:,:,:,1,cubicCnt]=volFA
-                trainSeg[:,:,:,1,cubicCnt]=volSeg
+                trainFA[:,:,:,0,cubicCnt]=volFA
+                trainSeg[:,:,:,0,cubicCnt]=volSeg
     #trainFA=float(trainFA)
     #trainSeg=float(trainSeg)
     with h5py.File('./train_%s.h5'%fileID,'w') as f:
