@@ -57,6 +57,8 @@ h. infant_train_test_bn.prototxt: a FCN architecture with Bacth Normalization
 
 i: infant_train_test_unet_bn.prototxt: a Unet architecture with Batch Normalization. <B> When doing whole image voxelwise segmentation, I suggest using this one. This is a prototxt achieving good performance and I designed in late 2015 (or early 2016).</B>
 
+j: infant_train_test_23d_resnet_fcn.prototxt: a basic FCN+residual unit
+
 <B>How to train/resume/finetune: (Note, to run it, you have to install caffe which support 3D operations)</B> 
 
 a. train_infant.sh: shell code to train the model
