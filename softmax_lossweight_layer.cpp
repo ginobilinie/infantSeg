@@ -1,5 +1,5 @@
 /***
-	weight_softmax_loss
+	Weight softmax loss
 	Dong Nie
 	You have to add sth to the caffe.proto:
        optional SoftmaxWithLossWParameter softmax_lossw_param = 147;
