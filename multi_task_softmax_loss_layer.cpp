@@ -1,3 +1,14 @@
+/***
+	Multi_task_softmax_loss
+	Dong Nie
+	You have to add sth to the caffe.proto:
+       optional MultiTaskSoftmaxLossParameter multi_task_softmax_loss_param = 142;
+       message MultiTaskSoftmaxLossParameter {
+	  optional int32 task_id = 1 [default = 0];
+	  repeated int32 weight_labels = 2;
+	  repeated float labels_weight = 3;
+	}
+***/
 #include <algorithm>
 #include <cfloat>
 #include <vector>
@@ -5,6 +16,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/util/math_functions.hpp"
 #include "caffe/vision_layers.hpp"
+
 
 namespace caffe {
 
@@ -28,8 +40,7 @@ void MultiTaskSoftmaxWithLossLayer<Dtype>::LayerSetUp(
 	  this->layer_param_.multi_task_softmax_loss_param().weight_labels_size();
     CHECK_EQ(weight_labels_size, 
 	  this->layer_param_.multi_task_softmax_loss_param().labels_weight_size())
-	  << "weight_labels_size should be equal to labels_weight_size";
-//puts("test2..........");	
+	  << "weight_labels_size should be equal to labels_weight_size";	
 	int labels_weights_size = prob_.channels();
 	labels_weights_ = new Dtype[labels_weights_size];
 	 memset(labels_weights_, Dtype(1), sizeof(Dtype) * labels_weights_size);
@@ -40,7 +51,6 @@ void MultiTaskSoftmaxWithLossLayer<Dtype>::LayerSetUp(
 	std::cout << "channels: " << labels_weights_size << ": " <<  labels_weights_[0] << ", " << labels_weights_[1] << std::endl;
 
 
-//puts("test3..........");
 	for (int i = 0; i < weight_labels_size; i ++) {
 	  labels_weights_[this->layer_param_.multi_task_softmax_loss_param().weight_labels(i)]
 	    = this->layer_param_.multi_task_softmax_loss_param().labels_weight(i);
@@ -86,8 +96,6 @@ void MultiTaskSoftmaxWithLossLayer<Dtype>::Forward_cpu(
   int task_dim = bottom[1]->count() / num;
 
 
- // float percent0 = 0;
-
  
   for (int n = 0; n < num; n ++) {
 	int offset1 = n * task_dim + task_id_ * spatial_dim;
@@ -115,7 +123,6 @@ void MultiTaskSoftmaxWithLossLayer<Dtype>::Forward_cpu(
         continue;
       }
     
-      // std::cout << label_value << std::endl;
 
       DCHECK_GE(label_value, 0);
       DCHECK_LT(label_value, prob_.channels());
@@ -204,7 +211,7 @@ void MultiTaskSoftmaxWithLossLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>
         }
       }
     }
-    // Scale gradient
+    // Scale the gradient
     const Dtype loss_weight = top[0]->cpu_diff()[0];
 
 	int static tmpcnt = 0;
