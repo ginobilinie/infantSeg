@@ -1,5 +1,5 @@
 /***
-	Multi_task_softmax_loss
+	weight_softmax_loss
 	Dong Nie
 	You have to add sth to the caffe.proto:
        optional SoftmaxWithLossWParameter softmax_lossw_param = 147;
