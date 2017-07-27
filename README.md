@@ -121,6 +121,6 @@ And if you want to read the intermedia layer's output, you can specify it by "te
 q: sepFiles.py: preprocess the files. make directories, cp specific files to each of the filespr
 renameFiles.py: preprocess the files: rename files
 
-r: multi_task_softmax_loss_layer.cpp: the weight loss cross entropy loss
+r: softmax_lossweight_layer.cpp: the weight loss cross entropy loss (can work for 3d, I think it works if wejust merge it into the latest caffe)
 
 
