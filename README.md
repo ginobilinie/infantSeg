@@ -123,4 +123,7 @@ renameFiles.py: preprocess the files: rename files
 
 r: softmax_lossweight_layer.cpp: the weight loss cross entropy loss (can work for 3d, I think it works if wejust merge it into the latest caffe); softmax_lossweight_layer.hpp
 
+s: extractPatch4SegMultiModalMedImg.py: implement the extracting patches function for multi-modality data. </br>
+<B>And this one is much better than readMedImg4CaffeCropNie.py, so I suggest you use this one if it is multi-modality data.</B>
+
 
