@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-../../build/tools/caffe train --solver=infant_solver.prototxt -gpu 2
+caffe train --solver=infant_solver.prototxt -gpu 2
