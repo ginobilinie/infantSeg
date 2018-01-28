@@ -13,8 +13,11 @@ Basic steps:
 
 4. evaluate the caffe model with evalCaffeModel4ImgNie.py, I store them in nifti format.
 
-<B>If you think it is useful for you, please star it. HAHA. And you can cite this paper (this paper is a simplified version of our paper, a better version is under review by a journal, I'll notify you if it is AC):</br>
-"Nie, Dong, et al. "Fully convolutional networks for multi-modality isointense infant brain image segmentation." Biomedical Imaging (ISBI), 2016 IEEE 13th International Symposium on. IEEE, 2016."</B>
+<B>If you think it is useful for you, please star it. HAHA. And you can cite this paper:</br>
+"Nie, Dong, et al. "Fully convolutional networks for multi-modality isointense infant brain image segmentation." Biomedical Imaging (ISBI), 2016 IEEE 13th International Symposium on. IEEE, 2016."</br>
+"Dong Nie, Li Wang, Ehsan Adeli, Cuijing Lao, Weili Lin, Dinggang Shen. 3D Fully Convolutional Networks for Multi-Modal Isointense Infant Brain Image Segmentation, IEEE Transactions on Cybernetics, 2018."
+</B>
+
 
 If you want to do projects with caffe in the server, please first refer to http://on-demand.gputechconf.com/gtc/2015/webinar/deep-learning-course/getting-started-with-caffe.pdf (if you are familiar with caffe, please ignore it). And I will introduce detailed steps for developing deep learning applications in medical image analysis with our server based caffe in the following steps.
 .........................................................................................................................................................................................................................................................
