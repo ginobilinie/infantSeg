@@ -62,7 +62,7 @@ i: infant_train_test_unet_bn.prototxt: a Unet architecture with Batch Normalizat
 
 j: infant_train_test_23d_resnet_fcn.prototxt: a basic FCN+residual unit
 
-k: infant_train_test_skipunet.prototxt: the basic idea in the TCYB paper
+k: infant_train_test_skipunet.prototxt: the basic idea in the TCYB paper. You can also choose infant_train_test_skipunet-v1.prototxt or infant_train_test_skipunet-v2.prototxt.
 
 <B>How to train/resume/finetune: (Note, to run it, you have to install caffe which support 3D operations)</B> 
 
