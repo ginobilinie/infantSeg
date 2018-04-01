@@ -1,7 +1,10 @@
 # infantSeg
 
 This is the project for multi-modality infant brain segmentation at the isointense stage. We develop deep learning based methods to deal with the segmentation task.
-More will be uploaded after the journal paper is accepted.
+
+Note, we have released the caffe3D platform for deep learning algorithms, please refer to my another repository for more details:
+
+caffe3D: https://github.com/ginobilinie/caffe3D
 
 Basic steps:
 
@@ -13,9 +16,10 @@ Basic steps:
 
 4. evaluate the caffe model with evalCaffeModel4ImgNie.py, I store them in nifti format.
 
-<B>If you think it is useful for you, please star it. HAHA. And you can cite this paper:</br>
-"Nie, Dong, et al. "Fully convolutional networks for multi-modality isointense infant brain image segmentation." Biomedical Imaging (ISBI), 2016 IEEE 13th International Symposium on. IEEE, 2016."</br>
-"Dong Nie, Li Wang, Ehsan Adeli, Cuijing Lao, Weili Lin, Dinggang Shen. 3D Fully Convolutional Networks for Multi-Modal Isointense Infant Brain Image Segmentation, IEEE Transactions on Cybernetics, 2018."
+<B>If you think it is useful for you, please star it. HAHA. And you can cite these papers:</br>
+"Nie, Dong, et al. "Fully convolutional networks for multi-modality isointense infant brain image segmentation." Biomedical Imaging (ISBI), 2016 IEEE 13th International Symposium on. IEEE, 2016." (this one mainly discusses about early fusion or later fusion)</br>
+
+"Dong Nie, Li Wang, Ehsan Adeli, Cuijing Lao, Weili Lin, Dinggang Shen. 3D Fully Convolutional Networks for Multi-Modal Isointense Infant Brain Image Segmentation, IEEE Transactions on Cybernetics, 2018. (this one mainly provides a transformation module and fusion module to better aggregate the high-resolution features with the highly-semantic features.)"
 </B>
 
 
