@@ -96,7 +96,7 @@ def main():
     #normfilter=sitk.NormalizeImageFilter()
     #img=normfilter.Execute(img)
     labelOrg=sitk.ReadImage(labelfn)
-    labelimg=sitk.ReadImage(labelOrg) 
+    labelimg = sitk.GetArrayFromImage(labelOrg) 
     #you can do what you want here for for your label img
     
     fileID='%d'%id
